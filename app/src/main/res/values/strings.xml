@@ -1,0 +1,12 @@
+<resources>
+	<string name="app_name">ScarletWebsocket</string>
+	<string name="subscribe_button">Subscribe</string>
+	<string name="unsubscribe_button">Unsubscribe</string>
+	<string name="subscription_notification">Subscription enabled: %b</string>
+	<string name="error_title">Something went wrong</string>
+	<string name="error_positive_dialog">OK</string>
+	<string name="snapshot_title">snapshot</string>
+	<string name="ticker_title">ticker</string>
+	<string name="price_format">price: %s</string>
+	<string name="sequence_format">sequence: %d</string>
+</resources>

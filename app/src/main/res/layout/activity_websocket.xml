@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recyclerView"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/margin_padding_unexpected"
+		android:layout_weight="1"
+		app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+		tools:itemCount="8"
+		tools:listitem="@layout/item_ticker" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/subscribeButton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="@dimen/margin_padding_16"
+		android:layout_marginTop="@dimen/margin_padding_16"
+		android:paddingVertical="@dimen/margin_padding_10"
+		android:text="@string/subscribe_button"
+		app:cornerRadius="@dimen/corner_radius_8" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/unsubscribeButton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="@dimen/margin_padding_16"
+		android:layout_marginBottom="@dimen/margin_padding_16"
+		android:paddingVertical="@dimen/margin_padding_10"
+		android:text="@string/unsubscribe_button"
+		app:cornerRadius="@dimen/corner_radius_8" />
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="websocket_url" translatable="false">wss://ws-feed.exchange.coinbase.com</string>
+</resources>

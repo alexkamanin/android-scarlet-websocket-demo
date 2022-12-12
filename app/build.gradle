@@ -1,0 +1,63 @@
+plugins {
+	id("com.android.application")
+	id("org.jetbrains.kotlin.android")
+	id("kotlin-kapt")
+	id("dagger.hilt.android.plugin")
+}
+
+android {
+	namespace application.id
+	compileSdk application.compileSdk
+
+	defaultConfig {
+		applicationId application.id
+		minSdk application.minSdk
+		targetSdk application.targetSdk
+		versionCode application.versionCode
+		versionName application.versionName
+	}
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_11
+		targetCompatibility JavaVersion.VERSION_11
+	}
+	kotlinOptions {
+		jvmTarget = JavaVersion.VERSION_11.toString()
+	}
+	buildFeatures {
+		viewBinding true
+	}
+}
+
+dependencies {
+	implementation("com.github.kirich1409:viewbindingpropertydelegate:$versions.viewbinding")
+
+	implementation("com.google.android.material:material:$versions.material")
+
+	implementation("androidx.core:core-ktx:$versions.core")
+	implementation("androidx.appcompat:appcompat:$versions.appcompat")
+	implementation("androidx.constraintlayout:constraintlayout:$versions.constraintlayout")
+	implementation("androidx.navigation:navigation-fragment-ktx:$versions.navigation")
+	implementation("androidx.navigation:navigation-ui-ktx:$versions.navigation")
+
+	implementation("com.squareup.okhttp3:okhttp:$versions.okhttp")
+	implementation("com.squareup.okhttp3:logging-interceptor:$versions.okhttp")
+
+	implementation("com.squareup.moshi:moshi-kotlin:$versions.moshi")
+	implementation("com.squareup.moshi:moshi-adapters:$versions.moshi")
+
+	implementation("com.tinder.scarlet:scarlet:$versions.scarlet")
+	implementation("com.tinder.scarlet:websocket-okhttp:$versions.scarlet")
+	implementation("com.tinder.scarlet:stream-adapter-coroutines:$versions.scarlet")
+	implementation("com.tinder.scarlet:message-adapter-gson:$versions.scarlet")
+	implementation("com.tinder.scarlet:message-adapter-moshi:$versions.scarlet")
+	implementation("com.tinder.scarlet:lifecycle-android:$versions.scarlet")
+
+	implementation("com.google.dagger:hilt-android:$versions.hilt")
+	kapt("com.google.dagger:hilt-compiler:$versions.hilt")
+
+	testImplementation("junit:junit:$versions.testJunit")
+	testImplementation("org.mockito.kotlin:mockito-kotlin:$versions.testMockito")
+	testImplementation("androidx.arch.core:core-testing:$versions.testArch")
+	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.testCoroutines")
+	testImplementation("app.cash.turbine:turbine:$versions.testTurbine")
+}
